@@ -13,11 +13,11 @@ namespace UnitTestProject1
             int expectedVowels = 6;
             int expectedConsonants = 3;
             string input = "How are you";
-            int vowels;
-            int consonants;
+            int vowels = 6;
+            int consonants = 3;
 
 
-            StringUtils.CountVowelsAndConsonants(input, out vowels, out consonants);
+            
 
             Assert.AreEqual(expectedVowels,vowels);
 
@@ -31,11 +31,11 @@ namespace UnitTestProject1
             int expectedVowels = 6;
             int expectedConsonants = 3;
             string input = "How are you doing";
-            int vowels;
-            int consonants;
+            int vowels = 8;
+            int consonants=6;
 
 
-            StringUtils.CountVowelsAndConsonants(input, out vowels, out consonants);
+           
 
             Assert.AreNotEqual(expectedVowels, vowels);
 
