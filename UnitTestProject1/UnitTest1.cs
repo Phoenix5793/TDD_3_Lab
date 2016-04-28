@@ -42,6 +42,40 @@ namespace UnitTestProject1
 
         }
 
+        [TestMethod]
+        public void StringReplacement_AreEqual()
+        {
+
+            string input = "God dag Niklas";
+
+            string replacementWord = "kväll";
+
+            string expectedSentence = "God kväll Niklas";
+
+            string resultSentence = StringReplacement(input, replacementWord);
+
+            Assert.AreEqual(expectedSentence,resultSentence);
+
+        }
+
+        [TestMethod]
+        public void StringReplacement_AreNotEqual()
+        {
+
+            string input = "God dag Niklas";
+
+            string replacementWord = "morgon";
+
+            string expectedSentence = "God kväll Niklas";
+
+            string resultSentence = StringReplacement(input, replacementWord);
+
+
+            Assert.AreNotEqual(expectedSentence, resultSentence);
+
+
+        }
+
 
     }
 }
