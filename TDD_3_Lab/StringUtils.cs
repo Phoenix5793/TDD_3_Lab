@@ -31,6 +31,26 @@ namespace TDD_3_Lab
         }
 
 
+       public static string StringReplacement(string input, string replacementWord, string wordToExchange)
+       {
+           string[] wordList = input.Split(' ');
+
+           
+           for (int i = 0; i < wordList.Length; i++)
+           {
+               if (wordList[i] == wordToExchange)
+               {
+                    wordList[i] = wordList[i].Replace(wordToExchange, replacementWord);
+               }
+              
+           }
+
+           string output = string.Join(" ", wordList);
+
+           return output;
+       }
+
+
 
 
     }
