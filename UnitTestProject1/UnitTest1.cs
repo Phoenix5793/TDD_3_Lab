@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TDD_3_Lab;
 
 namespace UnitTestProject1
 {
@@ -14,9 +15,9 @@ namespace UnitTestProject1
             string input = "How are you";
             int vowels;
             int consonants;
-            
 
-            CountVowelsAndConsonants(input, out vowels, out consonants);
+
+            StringUtils.CountVowelsAndConsonants(input, out vowels, out consonants);
 
             Assert.AreEqual(expectedVowels,vowels);
 
@@ -34,11 +35,11 @@ namespace UnitTestProject1
             int consonants;
 
 
-            CountVowelsAndConsonants(input, out vowels, out consonants);
+            StringUtils.CountVowelsAndConsonants(input, out vowels, out consonants);
 
-            Assert.AreEqual(expectedVowels, vowels);
+            Assert.AreNotEqual(expectedVowels, vowels);
 
-            Assert.AreEqual(expectedConsonants, consonants);
+            Assert.AreNotEqual(expectedConsonants, consonants);
 
         }
 

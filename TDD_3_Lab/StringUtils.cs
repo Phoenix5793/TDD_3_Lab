@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TDD_3_Lab
 {
-    class StringUtils
+   public static class StringUtils
     {
 
         public static void CountVowelsAndConsonants(string input, out int vowelCount, out int consonantCount)
@@ -14,6 +14,7 @@ namespace TDD_3_Lab
             vowelCount = 0;
             consonantCount = 0;
             input = input.ToLower();
+            input = input.Replace(" ", String.Empty);
 
             var vowels = new HashSet<Char> {'a', 'e', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö'};
 
