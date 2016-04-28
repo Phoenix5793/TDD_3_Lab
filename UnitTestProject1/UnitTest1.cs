@@ -36,9 +36,9 @@ namespace UnitTestProject1
 
             CountVowelsAndConsonants(input, out vowels, out consonants);
 
-            Assert.AreEqual(expectedVowels, vowels);
+            Assert.AreNotEqual(expectedVowels, vowels);
 
-            Assert.AreEqual(expectedConsonants, consonants);
+            Assert.AreNotEqual(expectedConsonants, consonants);
 
         }
 
